@@ -25,10 +25,11 @@ class Song < ActiveRecord::Base
       note = Note.create(content: content)
       self.notes << note
     end
+    end
   end
 
   def note_contents
-    self.notes.map do|note|
+    self.notes.map do |note|
     note.content
     end
   end
