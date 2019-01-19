@@ -20,7 +20,7 @@ class Song < ActiveRecord::Base
   end
 
   def note_contents
-    self.note_contents ? self.note_contents.name : nil
+    self.note_contents ? self.note_contents: nil
   end
 
   def note_contents=(song_ids)
