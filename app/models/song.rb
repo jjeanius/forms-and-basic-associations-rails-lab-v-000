@@ -19,10 +19,15 @@ class Song < ActiveRecord::Base
     self.genre ? self.genre.name : nil
   end
 
+  def note_contents=(contents)
+    contents.each do |content|
+      !content=[]
+  end
+
   def note_contents
     self.notes.map |note|
     note.content
-  end
+    end
   end
 
 
